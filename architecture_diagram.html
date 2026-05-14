@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightweight Hybrid ML Ensemble Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 95%;
+            overflow-x: auto;
+        }
+        .mermaid {
+            display: flex;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lightweight Hybrid ML Ensemble for WAF Threat Detection</h1>
+        <div class="mermaid">
+flowchart LR
+
+%% ============================================================
+%% STAGE 1: DATA PROCESSING & FEATURE ENGINEERING
+%% ============================================================
+subgraph S1["📊 Stage 1: Data Processing & Feature Engineering"]
+    direction LR
+    
+    A["📁 Raw Network Flows<br/><b>CIC-IDS-2017</b><br/>2.8M records, 80 features<br/><b>UNSW-NB15</b><br/>447K records, 49 features<br/><b>CIC-IDS-2018</b><br/>16M records (sampled to 90K)"]
+    
+    B["🧹 Preprocessing<br/>━━━━━━━━━━━━━━━<br/>• Keep numeric columns only<br/>• Remove null/infinite values<br/>• StandardScaler normalization"]
+    
+    C["🎯 Feature Selection<br/>━━━━━━━━━━━━━━━<br/>• SelectKBest with f_classif<br/>• k = 30 features<br/>• Reduces noise by 62%"]
+    
+    D["⚖️ SMOTE Balancing<br/>━━━━━━━━━━━━━━━<br/>• k = 5 nearest neighbors<br/>• Synthetic minority samples<br/>• Balances attack/normal ratio"]
+    
+    E["✂️ Train-Test Split<br/>━━━━━━━━━━━━━━━<br/>• 80% Training<br/>• 20% Testing<br/>• Stratified by class"]
+    
+    A --> B --> C --> D --> E
+end
+
+%% ============================================================
+%% STAGE 2: PARALLEL BASE LEARNERS
+%% ============================================================
+subgraph S2["🤖 Stage 2: Parallel Base Learners (Diverse Architectures)"]
+    direction LR
+    
+    F["📏 KNN<br/>━━━━━━━━━━━━━━━<br/>• k = 5 neighbors<br/>• Euclidean distance<br/>• Uniform weighting<br/><b>Captures local patterns</b>"]
+    
+    G["🌲 Random Forest<br/>━━━━━━━━━━━━━━━<br/>• n = 100 trees<br/>• max_depth = 15<br/>• min_samples_leaf = 5<br/>• Gini impurity<br/><b>Handles feature interactions</b>"]
+    
+    H["⚡ XGBoost<br/>━━━━━━━━━━━━━━━<br/>• n = 50 boosting rounds<br/>• learning_rate = 0.1<br/>• max_depth = 6<br/>• subsample = 0.8<br/><b>Gradient boosting with regularization</b>"]
+end
+
+%% Connect Stage 1 to Stage 2
+E --> F
+E --> G
+E --> H
+
+%% ============================================================
+%% STAGE 3: WEIGHTED ENSEMBLE
+%% ============================================================
+subgraph S3["🎯 Stage 3: Weighted Soft Voting Ensemble"]
+    direction LR
+    
+    I["⚖️ Weighted Soft Voting<br/>━━━━━━━━━━━━━━━━━━━━━━<br/>KNN weight: 0.2 (20%)<br/>Random Forest weight: 0.4 (40%)<br/>XGBoost weight: 0.4 (40%)<br/>━━━━━━━━━━━━━━━━━━━━━━<br/><b>ŷ = argmax Σ wᵢ × pᵢ(c|x)</b><br/>━━━━━━━━━━━━━━━━━━━━━━<br/>• Soft voting preserves probabilities<br/>• Higher weight to stronger models<br/>• Outperforms hard voting by +3.7%"]
+end
+
+%% Connect Stage 2 to Stage 3
+F --> I
+G --> I
+H --> I
+
+%% ============================================================
+%% STAGE 4: PREDICTION & EVALUATION
+%% ============================================================
+subgraph S4["📈 Stage 4: Prediction & Evaluation"]
+    direction LR
+    
+    J["✅ Final Prediction<br/>━━━━━━━━━━━━━━━<br/>Normal (0) / Attack (1)<br/>━━━━━━━━━━━━━━━<br/>Confidence threshold = 0.5"]
+    
+    K["📊 Evaluation Metrics<br/>━━━━━━━━━━━━━━━━━━━━━━<br/>• Accuracy: 99.56% (CIC-2017)<br/>• Precision: 0.9927<br/>• Recall: 0.9954<br/>• F1-Score: 0.9940<br/>• ROC-AUC: 0.9996<br/>━━━━━━━━━━━━━━━━━━━━━━<br/><b>Per-dataset & per-class reporting</b>"]
+end
+
+I --> J
+J -.-> K
+
+%% ============================================================
+%% STYLES
+%% ============================================================
+classDef data fill:#d4f8d4,stroke:#2e7d32,stroke-width:2px,color:#000;
+classDef process fill:#dbeafe,stroke:#1e40af,stroke-width:2px,color:#000;
+classDef model fill:#ffe0b2,stroke:#ef6c00,stroke-width:3px,color:#000;
+classDef ensemble fill:#ffcdd2,stroke:#c62828,stroke-width:3px,color:#000;
+classDef metric fill:#fff3cd,stroke:#f9a825,stroke-width:2px,color:#000;
+classDef prediction fill:#e1d5e7,stroke:#6a1b9a,stroke-width:2px,color:#000;
+
+class A data;
+class B,C,D,E process;
+class F,G,H model;
+class I ensemble;
+class J prediction;
+class K metric;
+        </div>
+    </div>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+        mermaid.contentLoaded();
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+flowchart TD
+
+%% ============================================================
+%% STAGE 1: DATA PROCESSING
+%% ============================================================
+
+subgraph S1["📊 Stage 1: Data Processing & Feature Engineering"]
+direction LR
+
+A["📁 Raw Network Flows<br/>CIC-IDS2017 / UNSW-NB15 / CIC-IDS2018"]
+
+B["🧹 Preprocessing<br/>Numeric columns<br/>StandardScaler"]
+
+C["🎯 Feature Selection<br/>SelectKBest<br/>k = 30"]
+
+D["⚖️ SMOTE Balancing<br/>k = 5<br/>Synthetic samples"]
+
+E["✂️ Train-Test Split<br/>80% / 20%<br/>Stratified"]
+
+A --> B --> C --> D --> E
+
+end
+
+%% ============================================================
+%% STAGE 2: BASE LEARNERS
+%% ============================================================
+
+subgraph S2["🤖 Stage 2: Parallel Base Learners"]
+direction LR
+
+F["📏 KNN<br/>k = 5"]
+
+G["🌲 Random Forest<br/>n = 100<br/>max_depth = 15"]
+
+H["⚡ XGBoost<br/>n = 50<br/>lr = 0.1"]
+
+end
+
+%% Connections
+E --> F
+E --> G
+E --> H
+
+%% ============================================================
+%% STAGE 3: ENSEMBLE
+%% ============================================================
+
+subgraph S3["🎯 Stage 3: Weighted Soft Voting Ensemble"]
+direction TD
+
+I["⚖️ Weighted Soft Voting<br/>KNN = 0.2<br/>RF = 0.4<br/>XGBoost = 0.4"]
+
+end
+
+F --> I
+G --> I
+H --> I
+
+%% ============================================================
+%% STAGE 4: OUTPUT
+%% ============================================================
+
+subgraph S4["📈 Stage 4: Prediction & Evaluation"]
+direction TD
+
+J["✅ Final Prediction<br/>Normal / Attack"]
+
+K["📊 Evaluation Metrics<br/>Accuracy<br/>Precision / Recall<br/>F1-Score / ROC-AUC"]
+
+end
+
+I --> J
+J --> K
+
+%% ============================================================
+%% STYLES
+%% ============================================================
+
+classDef data fill:#d4f8d4,stroke:#2e7d32,stroke-width:2px,color:#000;
+classDef process fill:#dbeafe,stroke:#1e40af,stroke-width:2px,color:#000;
+classDef model fill:#ffe0b2,stroke:#ef6c00,stroke-width:2px,color:#000;
+classDef ensemble fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#000;
+classDef metric fill:#fff3cd,stroke:#f9a825,stroke-width:2px,color:#000;
+classDef prediction fill:#e1d5e7,stroke:#6a1b9a,stroke-width:2px,color:#000;
+
+class A data;
+class B,C,D,E process;
+class F,G,H model;
+class I ensemble;
+class J prediction;
+class K metric;

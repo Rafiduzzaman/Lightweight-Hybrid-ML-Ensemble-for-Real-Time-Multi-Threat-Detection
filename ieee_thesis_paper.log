@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  14 MAY 2026 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  14 MAY 2026 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,6 +575,36 @@ File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfarrowwidth=\dimen304
 \pgfarrowlinewidth=\dimen305
 )
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\p
+gflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@layerbox@background=\box68
+\pgf@layerboxsaved@background=\box69
+)
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryfadings.code.tex
+File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/preprint\balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen306
@@ -586,20 +616,20 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (ieee_thesis_paper.aux)
 \openout1 = `ieee_thesis_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 -- Lines per column: 56 (exact).
 
@@ -608,7 +638,7 @@ i
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count328
 \scratchdimen=\dimen307
-\scratchbox=\box68
+\scratchbox=\box70
 \nofMPsegments=\count329
 \nofMParguments=\count330
 \everyMPshowfont=\toks36
@@ -632,20 +662,40 @@ USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
 
 
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
 
 
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[2] [3]
-Underfull \hbox (badness 1803) in paragraph at lines 277--278
+
+pdfTeX warning: pdflatex.exe (file ./assets/Untitled Diagram.drawio.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<assets/Untitled Diagram.drawio.pdf, id=35, 587.3142pt x 833.9958pt>
+File: assets/Untitled Diagram.drawio.pdf Graphic file (type pdf)
+<use assets/Untitled Diagram.drawio.pdf>
+Package pdftex.def Info: assets/Untitled Diagram.drawio.pdf  used on input line
+ 81.
+(pdftex.def)             Requested size: 285.00835pt x 404.71655pt.
+[2]
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
+
+ [3 <./assets/Untitled Diagram.drawio.pdf>]
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[4]
+Underfull \hbox (badness 1803) in paragraph at lines 267--268
 []\OT1/ptm/m/n/8 P. Garcia-Teodoro, J. Diaz-Verdejo, G. Macia-Fernandez, and E.
 
  []
@@ -661,20 +711,20 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (ieee_thesis_paper.aux)
+[5] (ieee_thesis_paper.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14511 strings out of 467871
- 297185 string characters out of 5418861
- 707790 words of memory out of 5000000
- 43148 multiletter control sequences out of 15000+600000
- 665825 words of font info for 112 fonts, out of 8000000 for 9000
+ 15118 strings out of 467871
+ 314734 string characters out of 5418861
+ 717074 words of memory out of 5000000
+ 43734 multiletter control sequences out of 15000+600000
+ 664747 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,104p,1089b,777s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,104p,1089b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
@@ -682,9 +732,9 @@ imes/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on ieee_thesis_paper.pdf (4 pages, 105557 bytes).
+Output written on ieee_thesis_paper.pdf (5 pages, 202438 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
