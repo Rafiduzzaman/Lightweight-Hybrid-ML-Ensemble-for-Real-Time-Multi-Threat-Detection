@@ -1,0 +1,5 @@
+Minority Attack F1 Scores
+==================================================
+Infiltration: F1=0.0014, Support=5
+
+Macro Average F1: 0.0014

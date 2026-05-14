@@ -1,0 +1,26 @@
+index,key,title,status,notes,file
+1,verizon2024,"2024 Data Breach Investigations Report,",failed,http 403 from https://doi.org/10.1016/s1361-3723(21)00061-0,
+2,cover1967,"Nearest neighbor pattern classification,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1109/5.58344,
+3,breiman2001,"Random Forests,",downloaded,source: https://arxiv.org/pdf/1511.05741,03_breiman2001.pdf
+4,chen2016,"XGBoost: A Scalable Tree Boosting System,",downloaded,source: https://cran.r-project.org/web/packages/xgboost/xgboost.pdf,04_chen2016.pdf
+5,rajagopal2023,"A Weighted Soft Voting Ensemble for Network Intrusion Detection,",downloaded,source: https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1625891/pdf,05_rajagopal2023.pdf
+6,moila2026,"Integrating NLP and Ensemble Learning into Next-Generation Firewalls,",downloaded,source: https://www.mdpi.com/1424-8220/26/2/424/pdf?version=1767939395,06_moila2026.pdf
+7,jan2025,"Modelling and Evaluation of Network Intrusion Detection Systems Using Machine Learning Techniques,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1109/icrest.2019.8644161,
+8,lawal2025,"A Comparative Analysis of Machine Learning Models for Intrusion Detection using the CSE-CIC-IDS2018 Dataset,",downloaded,source: https://journals.nipes.org/index.php/jstrissue/article/download/2217/1345,08_lawal2025.pdf
+9,alqahtani2022,"A Survey on Boosting and Bagging for Network Intrusion Detection,",failed,not a pdf (content-type: text/html; charset=utf-8); last url: https://doi.org/10.1007/978-3-642-31537-4_46,
+10,he2009,"Learning from Imbalanced Data,",failed,not a pdf (content-type: text/html; charset=utf-8); last url: https://doi.org/10.1007/978-3-030-04663-7_4,
+11,chawla2002,"SMOTE: Synthetic Minority Over-sampling Technique,",downloaded,source: https://www.jair.org/index.php/jair/article/download/10302/24590,11_chawla2002.pdf
+12,ferrag2025,"Improving intrusion detection in O-RAN with synthetic data generation: A GAN and SMOTE approach,",failed,http 403 from https://doi.org/10.2139/ssrn.5230449,
+13,kumar2025,"Anomaly-based intrusion detection system based on SMOTE-IPF, Whale Optimization Algorithm, and ensemble learning,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1016/j.iswa.2025.200543,
+14,fernandez2018,"SMOTE for Learning from Imbalanced Data: Progress and Challenges,",downloaded,source: https://jair.org/index.php/jair/article/download/11192/26406,14_fernandez2018.pdf
+15,sharafaldin2018,"Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization,",failed,not a pdf (content-type: text/html; charset=utf-8); last url: https://doi.org/10.5220/0006639801080116,
+16,moustafa2015,"UNSW-NB15: a comprehensive data set for network intrusion detection systems,",downloaded,source: https://ieeexplore.ieee.org/ielx7/6287639/8600701/08681044.pdf,16_moustafa2015.pdf
+17,tripathy2024,"A Review of Various Datasets for Machine Learning Algorithm-Based Intrusion Detection System: Advances and Challenges,",downloaded,source: https://arxiv.org/pdf/2506.02438,17_tripathy2024.pdf
+18,cic2018,"CSE-CIC-IDS2018 Dataset,",failed,not a pdf (content-type: text/html; charset=utf-8); last url: https://www.unb.ca/cic/datasets/ids-2018.html,
+19,nelder2024,"Optimized Weighted Voting Ensemble Learning for Network Intrusion Detection,",downloaded,source: https://dergipark.org.tr/en/download/article-file/3743915,19_nelder2024.pdf
+20,gupta2025,"Lightweight ensemble learning based intrusion detection framework with explainable artificial intelligence,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1016/j.engappai.2025.112936,
+21,transformer2025,"Comparative performance of GRU-NTM model against recent IDS architectures,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1109/rawcon.2004.1389131,
+22,jiang2021,"An Effective Intrusion Detection Model based on Random Forest Algorithm with I-SMOTE,",failed,not a pdf (content-type: text/html; charset=utf-8); last url: https://doi.org/10.5220/0010393801750182,
+23,tavallaee2009,"A detailed analysis of the KDD CUP 99 data set,",downloaded,source: https://nrc-publications.canada.ca/eng/view/accepted/?id=649fb606-4a97-47d0-b373-082cb3ac0259,23_tavallaee2009.pdf
+24,alzaqebah2025,"Enhancing Intrusion Detection with Explainable AI: A Transparent Approach to Network Security,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1109/c2i659362.2023.10430601,
+25,feature2025,"Feature Selection Methods for Intrusion Detection Systems in IoT,",failed,not a pdf (content-type: text/html;charset=utf-8); last url: https://doi.org/10.1016/j.icte.2021.04.012,
