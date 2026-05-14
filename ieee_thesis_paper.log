@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  14 MAY 2026 03:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  14 MAY 2026 11:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -668,10 +668,10 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14515 strings out of 467871
- 297039 string characters out of 5418861
- 709864 words of memory out of 5000000
- 43152 multiletter control sequences out of 15000+600000
+ 14511 strings out of 467871
+ 297185 string characters out of 5418861
+ 707790 words of memory out of 5000000
+ 43148 multiletter control sequences out of 15000+600000
  665825 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,10n,104p,1089b,777s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -682,7 +682,7 @@ imes/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on ieee_thesis_paper.pdf (4 pages, 105856 bytes).
+Output written on ieee_thesis_paper.pdf (4 pages, 105557 bytes).
 PDF statistics:
  49 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
