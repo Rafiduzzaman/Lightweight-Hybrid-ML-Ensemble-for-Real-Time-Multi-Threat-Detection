@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  14 MAY 2026 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.6)  16 MAY 2026 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -662,13 +662,13 @@ USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
 
 (C:\Users\USER\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -681,7 +681,7 @@ nclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: assets/Untitled Diagram.drawio.pdf Graphic file (type pdf)
 <use assets/Untitled Diagram.drawio.pdf>
 Package pdftex.def Info: assets/Untitled Diagram.drawio.pdf  used on input line
- 81.
+ 80.
 (pdftex.def)             Requested size: 285.00835pt x 404.71655pt.
 [2]
 Underfull \vbox (badness 1281) has occurred while \output is active []
@@ -695,7 +695,7 @@ Package balance Warning: You have called \balance in second column
 (balance)                Columns might not be balanced.
 
 [4]
-Underfull \hbox (badness 1803) in paragraph at lines 267--268
+Underfull \hbox (badness 1803) in paragraph at lines 266--267
 []\OT1/ptm/m/n/8 P. Garcia-Teodoro, J. Diaz-Verdejo, G. Macia-Fernandez, and E.
 
  []
@@ -724,7 +724,7 @@ Here is how much of TeX's memory you used:
  43734 multiletter control sequences out of 15000+600000
  664747 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,104p,1089b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,104p,976b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmr10.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/t
@@ -732,7 +732,7 @@ imes/utmb8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmbi8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on ieee_thesis_paper.pdf (5 pages, 202438 bytes).
+Output written on ieee_thesis_paper.pdf (5 pages, 202418 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
