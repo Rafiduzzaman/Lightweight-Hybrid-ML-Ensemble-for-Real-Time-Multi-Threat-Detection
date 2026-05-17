@@ -21,6 +21,7 @@
 \citation{cic2018}
 \citation{chawla2002smote}
 \citation{dietterich2000ensemble,polikar2006ensemble}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Comparison With Recent Related Works}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Datasets}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Preprocessing}{2}{}\protected@file@percent }
@@ -29,30 +30,30 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Evaluation Plan}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Results and Discussion}{2}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Within-Dataset Performance}{2}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Binary Classification Results on CIC-IDS-2017.}}{2}{}\protected@file@percent }
-\newlabel{tab:cic2017}{{I}{2}{}{table.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Comparison With Recent Related Works.}}{3}{}\protected@file@percent }
+\newlabel{tab:related_comparison}{{I}{3}{}{table.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Architecture of the proposed lightweight hybrid ensemble for WAF threat detection. Four-stage pipeline: (Stage 1) horizontal data processing flow—raw network flows through preprocessing, feature selection (SelectKBest, k=30), SMOTE balancing (k=5 neighbors), and train-test split (80/20); (Stage 2) parallel training of three diverse learners—KNN (k=5), Random Forest (n=100), and XGBoost (n=50); (Stage 3) weighted soft-voting ensemble with weights [0.2, 0.4, 0.4]; (Stage 4) final binary classification (Normal/Attack) with per-dataset and per-class evaluation metrics.}}{3}{}\protected@file@percent }
 \newlabel{fig:architecture}{{1}{3}{}{figure.1}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Binary Classification Results on UNSW-NB15.}}{3}{}\protected@file@percent }
-\newlabel{tab:unsw}{{II}{3}{}{table.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Binary Classification Results on CIC-IDS-2018.}}{3}{}\protected@file@percent }
-\newlabel{tab:cic2018}{{III}{3}{}{table.3}{}}
 \citation{chawla2002smote,he2009learning}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Binary Classification Results on CIC-IDS-2017.}}{4}{}\protected@file@percent }
+\newlabel{tab:cic2017}{{II}{4}{}{table.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Binary Classification Results on UNSW-NB15.}}{4}{}\protected@file@percent }
+\newlabel{tab:unsw}{{III}{4}{}{table.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Binary Classification Results on CIC-IDS-2018.}}{4}{}\protected@file@percent }
+\newlabel{tab:cic2018}{{IV}{4}{}{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Ablation Study}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Ablation Study on the Proposed Pipeline.}}{4}{}\protected@file@percent }
+\newlabel{tab:ablation}{{V}{4}{}{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Cross-Dataset Evaluation}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Cross-Dataset Evaluation of the Proposed Ensemble.}}{4}{}\protected@file@percent }
+\newlabel{tab:cross}{{VI}{4}{}{table.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Minority-Class Performance}{4}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Per-Class Minority Attack Performance.}}{4}{}\protected@file@percent }
+\newlabel{tab:minority}{{VII}{4}{}{table.7}{}}
 \bibcite{cover1967nearest}{1}
 \bibcite{breiman2001random}{2}
 \bibcite{chen2016xgboost}{3}
 \bibcite{chawla2002smote}{4}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Ablation Study}{4}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Ablation Study on the Proposed Pipeline.}}{4}{}\protected@file@percent }
-\newlabel{tab:ablation}{{IV}{4}{}{table.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Cross-Dataset Evaluation}{4}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Cross-Dataset Evaluation of the Proposed Ensemble.}}{4}{}\protected@file@percent }
-\newlabel{tab:cross}{{V}{4}{}{table.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Minority-Class Performance}{4}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Per-Class Minority Attack Performance.}}{4}{}\protected@file@percent }
-\newlabel{tab:minority}{{VI}{4}{}{table.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{4}{}\protected@file@percent }
 \bibcite{he2009learning}{5}
 \bibcite{sokolova2009systematic}{6}
 \bibcite{polikar2006ensemble}{7}
@@ -63,18 +64,25 @@
 \bibcite{sharafaldin2018toward2017}{12}
 \bibcite{moustafa2015unsw}{13}
 \bibcite{cic2018}{14}
-\bibcite{cortes1995support}{15}
-\bibcite{friedman2001greedy}{16}
-\bibcite{quinlan1993c45}{17}
-\bibcite{hastie2009elements}{18}
-\bibcite{chandola2009anomaly}{19}
-\bibcite{sommer2008outside}{20}
-\bibcite{ring2019survey}{21}
-\bibcite{shone2018deep}{22}
-\bibcite{luo2020ids}{23}
-\bibcite{meesad2021ensemble}{24}
-\bibcite{zhang2022feature}{25}
-\bibcite{rajagopal2023ensemble}{26}
-\bibcite{tripathy2024intrusion}{27}
-\bibcite{neldermead2024optimization}{28}
+\bibcite{periasamy2026sidnet}{15}
+\bibcite{yang2025anomaly}{16}
+\bibcite{ds2025enhancing}{17}
+\bibcite{aariya2025phishguardcore}{18}
+\bibcite{kumar2025phishing}{19}
+\bibcite{cortes1995support}{20}
+\bibcite{friedman2001greedy}{21}
+\bibcite{quinlan1993c45}{22}
+\bibcite{hastie2009elements}{23}
+\bibcite{chandola2009anomaly}{24}
+\bibcite{sommer2008outside}{25}
+\bibcite{ring2019survey}{26}
+\bibcite{shone2018deep}{27}
+\bibcite{luo2020ids}{28}
+\bibcite{meesad2021ensemble}{29}
+\bibcite{zhang2022feature}{30}
+\bibcite{rajagopal2023ensemble}{31}
+\bibcite{tripathy2024intrusion}{32}
+\bibcite{neldermead2024optimization}{33}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{}\protected@file@percent }
 \gdef \@abspage@last{5}

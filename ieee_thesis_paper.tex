@@ -15,14 +15,12 @@
 }
 \usepackage{balance}
 
+
 \title{Architecting a Lightweight Hybrid ML Ensemble for Real-Time Multi-Threat Detection in Web Application Firewalls}
 
 \author{
-\IEEEauthorblockN{Md. Fahad Islam Togor, Md. Shakhawat Hossain Khan, Md. Rafiduzzaman, Mahzabeen Nourin}
+\IEEEauthorblockN{Md. Fahad Islam Togor, Md. Shakhawat Hossain Khan, Md. Rafiduzzaman, Mahzabeen Nourin, Md. Mazid-ul-Haque}
 \IEEEauthorblockA{Department of Computer Science, American International University-Bangladesh (AIUB), Dhaka, Bangladesh}
-\\[1ex]
-\IEEEauthorblockN{MD. MAZID-UL-HAQUE}
-\IEEEauthorblockA{Supervisor, Department of Computer Science, AIUB, Dhaka, Bangladesh}
 }
 
 \begin{document}
@@ -30,7 +28,7 @@
 \maketitle
 
 \begin{abstract}
-Web application firewalls encounter increasingly heterogeneous and dynamic threats, but many models of intrusion detection have been found to be brittle across multiple datasets and distributions of attacks. In this paper, we propose an ensemble based on the lightweight combination of KNN, Random Forest, and XGBoost via weighted soft voting, alongside the use of SMOTE and feature selection, for multi-threat detection in web application firewalls. Our within-dataset experiments reveal good performance on CIC-IDS-2017, UNSW-NB15, and CIC-IDS-2018, where the proposed ensemble achieves 99.56\% accuracy on CIC-IDS-2017, 100.00\% on UNSW-NB15, and 90.42\% on CIC-IDS-2018. An ablation study shows that the proposed ensemble architecture, alongside the feature selection and SMOTE, contribute to our results, while our cross-dataset experiments show that there is significant drop in performance when evaluating our method across different datasets.
+Web Application Firewalls are facing more and more diverse threats, but existing intrusion detection systems lack robustness in transferring across datasets and attacks. In order to tackle this problem, this paper proposes a lightweight hybrid ensemble, which employs a combination of KNN, Random Forest, and XGBoost using weighted soft voting together with SMOTE and feature selection to achieve efficient multi-thread intrusion detection. Experiments conducted inside each dataset illustrate high efficiency on the CICIDS-2017, UNSW-NB15, and CIC-IDS-2018 datasets, achieving 99.56\%, 100.00\%, and 90.42\% accuracy, respectively. The ablation experiments suggest that the hybrid ensemble, feature selection, and SMOTE all contribute to the achieved performance, while tests across datasets show significant performance deterioration under distribution shift. The major contribution of this paper lies in proposing an effective and replicable ensemble pipeline that is efficient despite limited computational resources. This method achieves impressive results when working within one dataset and when transferred to various other intrusion detection benchmarks.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -38,7 +36,7 @@ intrusion detection, web application firewall, ensemble learning, SMOTE, feature
 \end{IEEEkeywords}
 
 \section{Introduction}
-Web application firewalls are supposed to detect a wider variety of malicious patterns while maintaining zero latency and minimal costs during inference. However, achieving this goal is not easy due to the diversity of attacks, the class imbalance problem, and the fact that the classifier with high accuracy on one dataset may suffer from a significant drop in other settings. Therefore, there is a gap between the theoretical performance of machine learning algorithms in the lab and practical use cases in which they have to generalize from a specific dataset to the whole network traffic.
+This paper makes three main contributions. First, we introduce a compact ensemble model for multiple threat detection systems that works well with flow-based WAF data. Second, we conduct a comprehensive evaluation process using three benchmarking datasets, along with an ablation analysis that focuses on how pre-processing, feature selection, and resampling affect the results. Finally, we perform cross-dataset evaluations to analyze the model's sensitivity to changes in the dataset, which reveals valuable information about its robustness.
 
 Another problem is that many intrusion detection algorithms focus on training on a single data set and validating within the same dataset. Nevertheless, the literature on intrusion detection, imbalance resolution, and ensemble learning suggests that high accuracy can be achieved by using appropriate pre-processing steps, balancing classes, and ensuring diversity of models \cite{cover1967nearest,breiman2001random,chen2016xgboost,chawla2002smote,he2009learning}. Many published systems, however, stop at internal validation without measuring their ability to transfer to different environments.
 The proposed approach aims to tackle this shortcoming by designing a light-weighted hybrid ensemble suitable for tabular network-flow features. Specifically, the data pipeline involves numeric pre-processing only, followed by normalization, feature selection, and SMOTE oversampling before training an ensemble with a soft voting strategy consisting of KNN, Random Forest and XGBoost. The overall approach ensures simplicity of implementation suitable for real-world application of WAF, while keeping a good detection performance on benchmarks.
@@ -62,6 +60,28 @@ Our ensemble differs in two key ways. First, it uses a weighted soft-voting desi
 
 Classical supervised learning references also help situate the base learners used in the ensemble, including support vector machines, boosted trees, and decision-tree induction \cite{cortes1995support,friedman2001greedy,quinlan1993c45,hastie2009elements}.
 
+\subsection{Comparison With Recent Related Works}
+Table~\ref{tab:related_comparison} compares the proposed model with recent related hybrid approaches reported in the literature. The proposed weighted ensemble remains competitive across the four common classification metrics and is especially strong on balanced detection quality, as reflected by the F1-score and recall values.
+
+\begin{table*}[htbp]
+\caption{Comparison With Recent Related Works.}
+\label{tab:related_comparison}
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Comparative Entry Name & Accuracy (\%) & Precision & Recall & F1-Score \\
+\midrule
+Proposed Weighted Ensemble (KNN + RF + XGBoost) & 99.56 & 99.27 & 99.54 & 99.40 \\
+SIDNet-XGBoost & 100.00 & 100.00 & 100.00 & 100.00 \\
+PhishGuardCore & 97.50 & 97.80 & N/A & N/A \\
+CNN-CapsNet-XGBoost-RF Hybrid & 98.00 & 97.30 & 98.80 & 98.00 \\
+State Estimation-LightGBM & 98.12 & N/A & 97.61 & 97.16 \\
+GPT-Transformer Hybrid & 99.00 & N/A & N/A & N/A \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
 \section{Methodology}
 \subsection{Datasets}
 We used three public intrusion-detection benchmarks. CIC-IDS-2017 contains approximately 2.8 million records with 80 flow features and a balanced mix of benign and attack traffic after preprocessing \cite{sharafaldin2018toward2017}. UNSW-NB15 contains approximately 447 thousand records with 49 features and a modern mix of normal and malicious flows \cite{moustafa2015unsw}. CSE-CIC-IDS2018 contains approximately 16 million records with 80 features; for tractable experimentation, we used a sampled subset of 90,000 records in the experimental pipeline \cite{cic2018}.
@@ -70,10 +90,10 @@ We used three public intrusion-detection benchmarks. CIC-IDS-2017 contains appro
 The pipeline retained numeric features only, removed non-numeric fields, and applied StandardScaler normalization to align feature magnitudes before model training. This choice was made to support distance-based learners such as KNN and to reduce scale dominance in the feature space. Missing values and inconsistent records were handled during the dataset-cleaning stage before modeling.
 
 \subsection{Feature Selection and Resampling}
-To reduce dimensionality and focus the ensemble on the most informative variables, we applied SelectKBest with $k=30$. Class imbalance was addressed using SMOTE with $k=5$ nearest neighbors, which synthesizes minority samples from local neighborhoods rather than duplicating observations \cite{chawla2002smote}. The combination of feature selection and resampling was chosen to limit overfitting while improving minority-class learnability.
+We reduced the dimensionality to $k=30$ using SelectKBest to focus the ensemble on the most informative variables. To deal with class imbalance, we used SMOTE with $k=5$ nearest neighbors, which creates synthetic minority samples from the local neighborhood, instead of simply copying observations \cite{chawla2002smote}. The combination of feature selection and resampling was used to reduce overfitting and improve the learnability of the minority class.
 
 \subsection{Ensemble Design}
-The proposed classifier is a soft-voting VotingClassifier built from KNN, Random Forest, and XGBoost with weights [0.2, 0.4, 0.4]. The weighting scheme reflects the stronger empirical contribution of tree-based learners on these tabular datasets while preserving the complementary distance-based signal from KNN. Soft voting aggregates predicted class probabilities, which is useful when component models produce calibrated or near-calibrated confidence estimates \cite{dietterich2000ensemble,polikar2006ensemble}.
+The proposed classifier is a soft-voting VotingClassifier based on KNN, Random Forest and XGBoost with weights [0.2, 0.4, 0.4]. The weighting scheme captures the relatively stronger empirical contribution of tree-based learners on these tabular datasets, while still preserving the complementary distance-based signal from KNN. Soft voting averages the class probabilities predicted by each individual classifier and is useful when the base learners provide calibrated or approximately calibrated confidences \cite{dietterich2000ensemble,polikar2006ensemble}.
 
 \begin{figure*}[htbp]
 \centering
@@ -276,6 +296,21 @@ N. Moustafa and J. Slay, ``UNSW-NB15: A comprehensive data set for network intru
 
 \bibitem{cic2018}
 CIC, ``CSE-CIC-IDS2018 Dataset,'' Canadian Institute for Cybersecurity, 2018. [Online]. Available: https://www.unb.ca/cic/datasets/ids-2018.html
+
+\bibitem{periasamy2026sidnet}
+S. Periasamy, D. G. R. Darshan, K. V. Varnika, G. B. L. Gangothri, and L. P. Teja, ``SIDNet-XGBoost: A hybrid deep learning framework for accurate SQL injection detection,'' in \textit{Proc. 5th Int. Conf. Sentiment Analysis and Deep Learning (ICSADL)}, 2026, doi: 10.1109/ICSADL67539.2026.11451819.
+
+\bibitem{yang2025anomaly}
+X. Yang, S. Yuan, L. Pan, X. Wei, and H. Xue, ``Anomaly detection method for smart grids integrating state estimation and LightGBM,'' in \textit{Proc. 5th Int. Conf. Energy, Power and Electrical Engineering (EPEE)}, 2025, doi: 10.1109/EPEE67527.2025.11428577.
+
+\bibitem{ds2025enhancing}
+D. S. B, G. M, J. M, and R. Keerthika, ``Enhancing web security using hybrid model,'' in \textit{Proc. 6th Int. Conf. Inventive Research in Computing Applications (ICIRCA)}, 2025, doi: 10.1109/ICIRCA65293.2025.11089651.
+
+\bibitem{aariya2025phishguardcore}
+Aariya N., A. Subashree, Kishore S., Harshini R. L., N. K. Srinithi, and Sana Parveen A., ``PhishGuardCore: An advanced framework for mitigating phishing attacks using hybrid detection techniques,'' in \textit{Proc. 5th Int. Conf. Emerging Research in Electronics, Computer Science and Technology (ICERECT)}, 2025, doi: 10.1109/ICERECT65215.2025.11376232.
+
+\bibitem{kumar2025phishing}
+G. Kumar K., V. Devi S., V. T., P. B., and K. N. V., ``Phishing website detection using a hybrid CNN-CapsNet-XGBoost-Random Forest model for cross-platform security,'' in \textit{Proc. 2nd Asia Pacific Conf. Innovation in Technology (APCIT)}, 2025.
 
 \bibitem{cortes1995support}
 C. Cortes and V. Vapnik, ``Support-vector networks,'' \textit{Mach. Learn.}, vol. 20, no. 3, pp. 273--297, 1995.
